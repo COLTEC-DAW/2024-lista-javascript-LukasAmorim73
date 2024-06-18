@@ -1,0 +1,17 @@
+function createMatrix(rows, cols, func) {
+  let matrix = [];
+  for (let i = 0; i < rows; i++) {
+    let row = [];
+    for (let j = 0; j < cols; j++) {
+      row.push(func(i, j));
+    }
+    matrix.push(row);
+  }
+  return matrix;
+}
+
+console.log(createMatrix(3, 3, (i, j) => i + j)); 
+console.log(createMatrix(3, 3, (i, j) => i * j)); 
+console.log(createMatrix(3, 3, (i, j) => (i === j ? 1 : 0))); 
+console.log(createMatrix(3, 3, (i, j) => i ** 2 / (j + 1))); 
+console.log(createMatrix(3, 3, (i, j) => (i > j ? 1 : i < j ? 5 : 0))); 

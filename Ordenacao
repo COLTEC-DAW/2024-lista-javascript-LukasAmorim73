@@ -1,0 +1,22 @@
+function bubbleSort(array, compare) {
+  let length = array.length;
+  for (let i = 0; i < length - 1; i++) {
+    for (let j = 0; j < length - 1 - i; j++) {
+      if (compare(array[j], array[j + 1]) > 0) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+      }
+    }
+  }
+  return array;
+}
+
+function ascending(a, b) {
+  return a - b;
+}
+
+function descending(a, b) {
+  return b - a;
+}
+
+console.log(bubbleSort([5, 3, 8, 2, 1, 4], ascending)); // [1, 2, 3, 4, 5, 8]
+console.log(bubbleSort([5, 3, 8, 2, 1, 4], descending)); // [8, 5, 4, 3, 2, 1]

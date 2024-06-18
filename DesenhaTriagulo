@@ -1,0 +1,9 @@
+function DesenhaTriangulo(lines) {
+  let result = "";
+  for (let i = 2; i <= lines + 1; i++) {
+    result += "#".repeat(i) + "\n";
+  }
+  console.log(result);
+}
+
+drawTriangle(5);
