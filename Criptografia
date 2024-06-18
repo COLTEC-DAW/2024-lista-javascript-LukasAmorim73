@@ -1,0 +1,8 @@
+function caesarCipher(str, shift) {
+  return str.replace(/[a-zA-Z]/g, (char) => {
+    const base = char <= "Z" ? 65 : 97;
+    return String.fromCharCode(((char.charCodeAt(0) - base + shift) % 26) + base);
+  });
+}
+
+console.log(caesarCipher("Hello World", 3));

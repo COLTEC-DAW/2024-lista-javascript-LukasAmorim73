@@ -1,0 +1,14 @@
+function drawChessBoard(lines) {
+  let result = "";
+  for (let i = 0; i < lines; i++) {
+    if (i % 2 === 0) {
+      result += "# # # # \n";
+    } else {
+      result += " # # # #\n";
+    }
+  }
+  console.log(result);
+}
+
+// Chamada da função
+drawChessBoard(8);

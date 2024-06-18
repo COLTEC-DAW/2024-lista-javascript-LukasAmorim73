@@ -1,0 +1,11 @@
+function countChars(frase, c) {
+  let count = 0;
+  for (let char of frase) {
+    if (char === c) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countChars("banana", "a"));

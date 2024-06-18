@@ -1,0 +1,19 @@
+function checkNumber(num, condition) {
+  return condition(num);
+}
+
+function isOdd(num) {
+  return num % 2 !== 0;
+}
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(checkNumber(3, isOdd));
+console.log(checkNumber(4, isPrime));
+console.log(checkNumber(7, isPrime));

@@ -1,0 +1,16 @@
+function mod2(number) {
+  if (number === 0) return true;
+  if (number === 1) return false;
+  return mod2(number - 2);
+}
+
+function mod(num, mod) {
+  if (num < mod) return false;
+  if (num === mod) return true;
+  return mod(num - mod, mod);
+}
+
+console.log(mod2(4));
+console.log(mod2(7));
+console.log(mod(10, 3));
+console.log(mod(12, 4));

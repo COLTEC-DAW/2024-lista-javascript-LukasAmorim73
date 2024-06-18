@@ -1,0 +1,9 @@
+function range(min, max, i = 1) {
+  let array = [];
+  for (let num = min; num <= max; num += i) {
+    array.push(num);
+  }
+  return array;
+}
+
+console.log(range(1, 10, 2));
